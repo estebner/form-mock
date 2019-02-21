@@ -1,0 +1,14 @@
+
+
+<div class="form-group" [ngSwitch]="type">
+  <label for="{{name}}">{{display | titlecase}}</label>
+
+  <div *ngSwitchCase="'file'">
+    <label class="custom-file-label">Choose the File</label>
+    <input [(ngModel)]="formValue" class="custom-file-input" type="file" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+    {{formValue}}
+  </div>
+  <div *ngSwitchDefault>
+      <input [(ngModel)]="formValue" class="form-control" type="{{type}}" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+  </div>
+</div>

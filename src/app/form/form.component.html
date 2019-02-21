@@ -1,0 +1,23 @@
+<main class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2"><h2>Counterparty Registration Form</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">Documents</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <app-form-field [type]="'file'" [required]=true [name]="'businessLiscence'" [display]="'Business License \/ Certificate of Incorporation'"></app-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <app-form-field [type]="'file'" [required]=true [name]="'govId'" [display]="'Government-issued ID of Shareholders \/ Legal Representative'"></app-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <app-form-field [type]="'file'" [name]="'bankRef'" [display]="'Commercial and Bank References (if available)'"></app-form-field>
+    </div>
+  </div>
+</main>
