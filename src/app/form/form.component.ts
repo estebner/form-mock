@@ -55,4 +55,8 @@ export class FormComponent implements OnInit {
       this.router.navigateByUrl(target);
     }
   }
+
+  goTo(target){
+      this.router.navigateByUrl(target);
+  }
 }
