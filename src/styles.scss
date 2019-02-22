@@ -1,11 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara');
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-/*@import url('build/css/countrySelect.css');*/
+@import '~bootstrap/scss/_mixins';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
 
-body, html{
-    font-family: 'Hind Vadodara', sans-serif;
+
+select {
+    border-radius: 0;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
+body {
+    
+}
+
+h2 {
+    padding: 10px 0;
+}
+
+.line-break{
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+    margin: 10px 0;
+}
+
+.formOffsets {
+    padding: 0 15px;
+
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-down(md) {
+        @include make-col(12);
+    }
+    @include media-breakpoint-up(lg) {
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+}
+
+.formCenter {
+    @include make-col-ready;
+    @include make-col(12);
+}
+
+.formDouble {
+    padding: 0 15px;
+
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+    }
+    /*@include media-breakpoint-up(lg) {
+        @include make-col(4);
+    }
+    &:nth-child(1){
+        @include media-breakpoint-up(lg) {
+            @include make-col-offset(2);
+        }
+    }*/
 }

@@ -2,3 +2,9 @@
 div {
     position: relative;
 }
+textarea{
+    resize:none;
+    width: 100%;
+    min-height: 4em;
+    resize: vertical;
+}

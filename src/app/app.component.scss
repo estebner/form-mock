@@ -1,7 +1,23 @@
-header{
+header, footer{
     background-color: #184a82
+}
+header .container .row .formOffsets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+footer {
+    height: 200px;
 }
 
 .royceLogoHeader {
     height: 3em;
 }
+

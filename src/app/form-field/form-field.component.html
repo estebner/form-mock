@@ -1,14 +1,33 @@
 
 
 <div class="form-group" [ngSwitch]="type">
-  <label for="{{name}}">{{display | titlecase}}</label>
+  <label for="{{name}}">{{display}}</label>
 
   <div *ngSwitchCase="'file'">
     <label class="custom-file-label">Choose the File</label>
-    <input [(ngModel)]="formValue" class="custom-file-input" type="file" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+    <input (change)="valueChange()" [(ngModel)]="formValue" class="custom-file-input" type="file" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
     {{formValue}}
   </div>
+
+  <div *ngSwitchCase="'textarea'">
+    <textarea #textarea (keyup)="adjustSize()" (change)="valueChange()" [(ngModel)]="formValue" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null"></textarea>
+  </div>
+  <div *ngSwitchCase="'select'">
+      <select (change)="valueChange()" [(ngModel)]="formValue" class="form-control" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+          <option value=''>Select Option</option>
+      </select>
+  </div>
+  <div *ngSwitchCase="'date'">
+      <div class="input-group">
+
+        <input ngbDatepicker #d="ngbDatepicker" (change)="valueChange()" [(ngModel)]="formValue" class="form-control"  name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+
+        <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+      </div>
+      </div>
+  </div>
   <div *ngSwitchDefault>
-      <input [(ngModel)]="formValue" class="form-control" type="{{type}}" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
+      <input (change)="valueChange()" [(ngModel)]="formValue" class="form-control" type="{{type}}" name="{{name}}" id="{{name}}-input" [attr.required]="required ? true : null">
   </div>
 </div>

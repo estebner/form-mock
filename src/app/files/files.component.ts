@@ -3,16 +3,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormCategoryComponent } from '../form-category/form-category.component'
 
 @Component({
-  selector: 'app-bank-info',
-  templateUrl: './bank-info.component.html',
-  styleUrls: ['./bank-info.component.scss']
+  selector: 'app-files',
+  templateUrl: './files.component.html',
+  styleUrls: ['./files.component.scss']
 })
-export class BankInfoComponent implements FormCategoryComponent {
+export class FilesComponent implements FormCategoryComponent {
 
   constructor() { }
 
   ngOnInit() {
-    
   }
 
 }
