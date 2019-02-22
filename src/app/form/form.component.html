@@ -4,14 +4,15 @@
       <div (click)="goTo('/general')" [ngClass]="{'selected': router.url=='/general'}" class="formTab"><span>General</span></div>
       <div (click)="goTo('/contact')" [ngClass]="{'selected': router.url=='/contact'}" class="formTab"><span>Contact</span></div>
       <div (click)="goTo('/bank')" [ngClass]="{'selected': router.url=='/bank'}" class="formTab"><span>Bank</span></div>
-      <div (click)="goTo('/Files')" [ngClass]="{'selected': router.url=='/files'}" class="formTab"><span>Files</span></div>
+      <div (click)="goTo('/comments')" [ngClass]="{'selected': router.url=='/comments'}" class="formTab"><span>Comments</span></div>
     </div>
       <router-outlet></router-outlet>
 
     <div class="row">
-      <div class="formCenter">
-        <button (click)="previousForm()" class="btn">Previous</button>
-        <button (click)="nextForm()" class="btn">Next</button>
+      <div class="formCenter formFooter">
+        <button *ngIf="router.url!='/general'" (click)="previousForm()" class="btn btn-light">Previous</button>
+        <button *ngIf="router.url!='/comments'" (click)="nextForm()" class="btn btn-light">Next</button>
+        <button *ngIf="router.url=='/comments'" (click)="nextForm()" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </div>

@@ -1,3 +1,29 @@
-<p>
-  contact-person-info works!
-</p>
+<div class="row formCenter sectionHeader">
+    <h6>Contact Person Information</h6>
+</div>
+<div class="line-break"></div>
+
+<div class="wrapper">
+  <div class="form-group" *ngFor="let contact of contactTypes">
+      <div class="row formCenter contactSectionHeader">
+          <span>{{contact.display}}</span>
+      </div>
+    <div class="line-break"></div>
+      <div class="row">
+        <div class="formDouble">
+          <app-form-field [name]="contact.name+'name'" [display]="'Name'"></app-form-field>
+        </div>
+        <div class="formDouble">
+          <app-form-field [name]="contact.name+'title'" [display]="'Title'"></app-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="formDouble">
+          <app-form-field [name]="contact.name+'email'" [display]="'Email'" [type]="'email'"></app-form-field>
+        </div>
+        <div class="formDouble">
+          <app-form-field [name]="contact.name+'phone'" [display]="'Phone'" [type]="'tel'"></app-form-field>
+        </div>
+      </div>
+  </div>
+</div>

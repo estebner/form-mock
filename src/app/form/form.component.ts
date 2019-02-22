@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { FormFieldComponent } from '../form-field/form-field.component';
 
 @Component({
@@ -16,7 +16,12 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+    });
   }
 
   nextForm() {
@@ -28,7 +33,7 @@ export class FormComponent implements OnInit {
       target = 'bank';
     }
     else if(this.router.url == '/bank'){
-      target = 'files';
+      target = 'comments';
     }
     if(target){
       this.router.navigateByUrl(target);
@@ -43,7 +48,7 @@ export class FormComponent implements OnInit {
     else if(this.router.url == '/bank'){
       target = 'contact';
     }
-    else if(this.router.url == '/files'){
+    else if(this.router.url == '/comments'){
       target = 'bank';
     }
     if(target){

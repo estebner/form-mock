@@ -1,3 +1,57 @@
-<p>
-  bank-info works!
-</p>
+<div class="row formCenter sectionHeader">
+    <h6>Bank Information</h6>
+</div>
+<div class="line-break"></div>
+
+<div class="row">
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'bankName'" [display]="'Bank Name'"></app-form-field>
+    </div>
+</div>
+<div class="row">
+  <div class="formCenter">
+      <app-form-field [type]="'textarea'" [required]=true [name]="'bankAddress'" [display]="'Bank Address'"></app-form-field>
+    </div>
+</div>
+<div class="row">
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'bankCity'" [display]="'City'"></app-form-field>
+    </div>
+    <div class="formDouble">
+        <app-form-field [type]="'select'" [required]=true [name]="'bankState'" [display]="'State'"></app-form-field>
+    </div>
+</div>
+<div class="row">
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'bankZip'" [display]="'Zip Code'"></app-form-field>
+    </div>
+    <div class="formDouble">
+        <app-form-field [type]="'select'" [required]=true [name]="'bankCountry'" [display]="'Country'"></app-form-field>
+    </div>
+</div>
+
+<div class="row">
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'accountNumber'" [display]="'Account Number'"></app-form-field>
+    </div>
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'beneficiaryName'" [display]="'Beneficiary Name'"></app-form-field>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="formDouble">
+        <app-form-field [name]="'swiftNumber'" [display]="'SWIFT Number'"></app-form-field>
+    </div>
+    <div class="formDouble">
+        <app-form-field [required]=true [name]="'abaRouting'" [display]="'ABA / Routing'"></app-form-field>
+    </div>
+</div>
+
+<div class="row">
+    <div class="formCenter">
+        <app-form-field [type]="'textarea'" [required]=true [name]="'paymentCommnets'" [display]="'Payment comments
+        and special instructions'"></app-form-field>
+      </div>
+  </div>

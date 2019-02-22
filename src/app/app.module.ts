@@ -11,7 +11,7 @@ import { GeneralBusinessInfoComponent } from './general-business-info/general-bu
 import { ContactPersonInfoComponent } from './contact-person-info/contact-person-info.component';
 import { BankInfoComponent } from './bank-info/bank-info.component';
 import { FormCategoryComponent } from './form-category/form-category.component';
-import { FilesComponent } from './files/files.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { FilesComponent } from './files/files.component';
     ContactPersonInfoComponent,
     BankInfoComponent,
     FormCategoryComponent,
-    FilesComponent
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,

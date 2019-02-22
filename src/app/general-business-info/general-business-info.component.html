@@ -1,68 +1,95 @@
+<div class="row formCenter sectionHeader">
+    <h6>Required Documents</h6>
+</div>
+<div class="line-break"></div>
 <div class="row">
+  <div class="formCenter">
+    <app-form-field [type]="'file'" [required]=true [name]="'businessLiscence'" [display]="'Business License \/ Certificate of Incorporation'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-        <app-form-field [type]="'select'" [required]=true [name]="'contactType'" [display]="'Contact Type'"></app-form-field>
-      </div>
-    <div class="formDouble">
-        <app-form-field [required]=true [name]="'legalBusinessName'" [display]="'Legal Business Name'"></app-form-field>
-    </div>
+</div>
+<div class="row">
+  <div class="formCenter">
+    <app-form-field [type]="'file'" [required]=true [name]="'govId'" [display]="'Government-issued ID of Shareholders \/ Legal Representative'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-        <app-form-field [type]="'select'" [required]=true [name]="'businessType'" [display]="'Type of Business'"></app-form-field>
-      </div>
-    <div class="formDouble">
-        <app-form-field [required]=true [name]="'taxId'" [display]="'Tax ID / TIN / ETN'"></app-form-field>
-    </div>
+</div>
+<div class="row">
+  <div class="formCenter">
+    <app-form-field [type]="'file'" [name]="'bankRef'" [display]="'Commercial and Bank References (if available)'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-      <app-form-field [type]="'date'" [required]=true [name]="'incorporationDate'" [display]="'Incorporation Date'"></app-form-field>
+</div>
+<div class="row formCenter sectionHeader">
+    <h6>General Business Information</h6>
+</div>
+<div class="line-break"></div>
+<div class="row">
+  <div class="formDouble">
+      <app-form-field [type]="'select'" [required]=true [name]="'contactType'" [display]="'Contact Type'"></app-form-field>
     </div>
+  <div class="formDouble">
+      <app-form-field [required]=true [name]="'legalBusinessName'" [display]="'Legal Business Name'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formCenter">
-      <app-form-field [type]="'textarea'" [required]=true [name]="'businessActivities'" [display]="'Business Activities as described in business
-      license'"></app-form-field>
+</div>
+<div class="row">
+  <div class="formDouble">
+      <app-form-field [type]="'select'" [required]=true [name]="'businessType'" [display]="'Type of Business'"></app-form-field>
     </div>
+  <div class="formDouble">
+      <app-form-field [required]=true [name]="'taxId'" [display]="'Tax ID / TIN / ETN'"></app-form-field>
   </div>
-  <div class="line-break"></div>
-  <div class="row">
-    <div class="formCenter">
-      <app-form-field [type]="'textarea'" [required]=true [name]="'address'" [display]="'Address'"></app-form-field>
-    </div>
+</div>
+<div class="row">
+  <div class="formDouble">
+    <app-form-field [type]="'date'" [required]=true [name]="'incorporationDate'" [display]="'Incorporation Date'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-      <app-form-field [required]=true [name]="'city'" [display]="'City'"></app-form-field>
-    </div>
-    <div class="formDouble">
-      <app-form-field [required]=true [name]="'state'" [display]="'State / Province'"></app-form-field>
-    </div>
+</div>
+<div class="row">
+  <div class="formCenter">
+    <app-form-field [type]="'textarea'" [required]=true [name]="'businessActivities'" [display]="'Business Activities as described in business
+    license'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-      <app-form-field [required]=true [name]="'zip'" [display]="'Zip Code'"></app-form-field>
-    </div>
-    <div class="formDouble">
-      <app-form-field [options]="countries" [type]="'select'" [required]=true [name]="'country'" [display]="'Country'"></app-form-field>
-    </div>
+</div>
+<div class="row formCenter sectionHeader">
+    <h6>Address</h6>
+</div>
+<div class="line-break"></div>
+<div class="row">
+  <div class="formCenter">
+    <app-form-field [type]="'textarea'" [required]=true [name]="'address'" [display]="'Address'"></app-form-field>
   </div>
-  <div class="line-break"></div>
-  <div class="row">
-    <div class="formDouble">
-      <app-form-field [type]="email" [required]=true [name]="'email'" [display]="'Email'"></app-form-field>
-    </div>
-    <div class="formDouble">
-      <app-form-field [options]="countries" [name]="'website'" [display]="'Website'"></app-form-field>
-    </div>
+</div>
+<div class="row">
+  <div class="formDouble">
+    <app-form-field [required]=true [name]="'city'" [display]="'City'"></app-form-field>
   </div>
-  <div class="row">
-    <div class="formDouble">
-      <app-form-field [required]=true [type]="tel" [name]="'phone'" [display]="'Phone'"></app-form-field>
-    </div>
-    <div class="formDouble">
-      <app-form-field [type]="'tel'" [required]=true [name]="'fax'" [display]="'Fax'"></app-form-field>
-    </div>
+  <div class="formDouble">
+    <app-form-field [required]=true [name]="'state'" [display]="'State / Province'"></app-form-field>
   </div>
+</div>
+<div class="row">
+  <div class="formDouble">
+    <app-form-field [required]=true [name]="'zip'" [display]="'Zip Code'"></app-form-field>
+  </div>
+  <div class="formDouble">
+    <app-form-field [options]="countries" [type]="'select'" [required]=true [name]="'country'" [display]="'Country'"></app-form-field>
+  </div>
+</div>
+<div class="row formCenter sectionHeader">
+    <h6>Contact Information</h6>
+</div>
+<div class="line-break"></div>
+<div class="row">
+  <div class="formDouble">
+    <app-form-field [type]="email" [required]=true [name]="'email'" [display]="'Email'"></app-form-field>
+  </div>
+  <div class="formDouble">
+    <app-form-field [options]="countries" [name]="'website'" [display]="'Website'"></app-form-field>
+  </div>
+</div>
+<div class="row">
+  <div class="formDouble">
+    <app-form-field [required]=true [type]="tel" [name]="'phone'" [display]="'Phone'"></app-form-field>
+  </div>
+  <div class="formDouble">
+    <app-form-field [type]="'tel'" [required]=true [name]="'fax'" [display]="'Fax'"></app-form-field>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 
 
 <div class="form-group" [ngSwitch]="type">
-  <label for="{{name}}">{{display}}</label>
+  <label *ngIf="display != ''" for="{{name}}">{{display}}</label>
 
   <div *ngSwitchCase="'file'">
     <label class="custom-file-label">Choose the File</label>
